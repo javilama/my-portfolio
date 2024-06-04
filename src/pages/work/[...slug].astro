@@ -77,6 +77,8 @@ const { Content } = await entry.render();
 
 	.tags {
 		display: flex;
+		flex-wrap: wrap;
+		place-content: center;
 		gap: 0.5rem;
 	}
 
@@ -134,6 +136,10 @@ const { Content } = await entry.render();
 	}
 
 	@media (min-width: 50em) {
+		.tags{
+			flex-wrap: nowrap;
+			place-content: start;
+		}
 		.back-link {
 			display: block;
 			align-self: flex-start;
