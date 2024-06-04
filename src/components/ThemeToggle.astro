@@ -17,16 +17,16 @@ import Icon from './Icon.astro';
 
 			const button = this.querySelector('button')!;
 
-			/** Set the theme to dark/light mode. */
+			/** Establece el tema en modo oscuro/claro. */
 			const setTheme = (dark: boolean) => {
 				document.documentElement.classList[dark ? 'add' : 'remove']('theme-dark');
 				button.setAttribute('aria-pressed', String(dark));
 			};
 
-			// Toggle the theme when a user clicks the button.
+			// Alternar el tema cuando un usuario hace clic en el botón.
 			button.addEventListener('click', () => setTheme(!this.isDark()));
 
-			// Initialize button state to reflect current theme.
+			// Inicializa el estado del botón para reflejar el tema actual.
 			setTheme(this.isDark());
 		}
 
