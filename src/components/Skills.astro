@@ -1,0 +1,70 @@
+---
+import Icon from './Icon.astro';
+---
+
+<section class="box skills">
+	<div class="stack gap-2 lg:gap-4">
+		<Icon icon="terminal-window" color="var(--accent-regular)" size="2.5rem" gradient />
+		<h2>Developer</h2>
+		<p>Experience building comprehensive and scalable React web applications with robust RESTful APIs using Node.js and Express.js.</p>
+	</div>
+	<div class="stack gap-2 lg:gap-4">
+		<Icon icon="bug-icon" color="var(--accent-regular)" size="2.5rem" gradient />
+		<h2>QA analist</h2>
+		<ul>
+			<li>Identifies and documents software defects with clarity and precision.</li>
+			<li>Experienced in executing comprehensive manual tests across various platforms and browsers.</li>
+			<li>Designs and executes effective and efficient automated tests using Cypress.io.</li>
+			<li>API tests using Postman.
+			</li>
+		</ul>
+	</div>
+	<div class="stack gap-2 lg:gap-4">
+		<Icon icon="strategy" color="var(--accent-regular)" size="2.5rem" gradient />
+		<h2>Strategy-Minded</h2>
+		<p>Focused on business needs, project goals, and tech trends.</p>
+	</div>
+</section>
+
+<style>
+	.box {
+		border: 1px solid var(--gray-800);
+		border-radius: 0.75rem;
+		padding: 1.5rem;
+		background-color: var(--gray-999_40);
+		box-shadow: var(--shadow-sm);
+	}
+
+	.skills {
+		display: flex;
+		flex-direction: column;
+		gap: 3rem;
+	}
+
+	.skills h2 {
+		font-size: var(--text-lg);
+	}
+    .skills ul>li{
+		color: var(--gray-400);
+	}
+	.skills p {
+		color: var(--gray-400);
+	}
+
+	@media (min-width: 50em) {
+		.box {
+			border-radius: 1.5rem;
+			padding: 2.5rem;
+		}
+
+		.skills {
+			display: grid;
+			grid-template-columns: repeat(3, 1fr);
+			gap: 5rem;
+		}
+
+		.skills h2 {
+			font-size: var(--text-2xl);
+		}
+	}
+</style>

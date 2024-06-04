@@ -1,0 +1,163 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+
+import ContactCTA from "../components/ContactCTA.astro";
+import Hero from "../components/Hero.astro";
+import Pill from "../components/Pill.astro";
+import Icon from "../components/Icon.astro";
+---
+
+<BaseLayout
+  title="About | Jairo Avila"
+  description="About Jairo Avila"
+>
+  <div class="stack gap-20">
+    <main class="wrapper about">
+      <Hero
+        title="About"
+        tagline="I believe in the power of teamwork to boost creativity and project efficiency. I'm passionate about learning and teaching, and enjoy sharing my knowledge with others."
+      >
+      <div class="phrase">
+        <h4><i>"We all learn more when we share our knowledge"</i></h4>
+      </div>
+        <img
+          width="1553"
+          height="873"
+          src="/assets/at-work.jpg"
+          alt="Jairo Avila at work with a colleague"
+        />
+      </Hero>
+      <section>
+        <h2 class="section-title">QA role</h2>
+        <div class="content">
+			<ul>
+				<li>Functional, Non-Functional, and Static Testing.</li>
+				<li>Black-Box & White-Box Testing.</li>
+				<li>API Testing (Postman).</li>
+				<li>Cypress.io Automation.</li>
+				<li>CI/CD Integration (Jenkins).</li>
+				<li>Bitbucket & Jira Management.</li>
+				<li>Test Result Monitoring.</li>
+				<li>Smoke & Regression Testing.</li>
+				<li>Production Deployment Validation.</li>
+			</ul>
+        </div>
+        <h2 class="section-title">Web master role</h2>
+        <div class="content">
+			<ul>
+				<li>Manage digital content for <a href="https://www.claro.com.co">www.claro.com.co.</a></a> </li>
+				<li>Design and implement websites and landing pages using HTML, CSS, and JavaScript.</li>
+				<li>Perform functional testing on forms for lead capture.</li>
+				<li>Optimize websites and landing pages.</li>
+			</ul>
+        </div>
+        <h2 class="section-title">Dev Backend role</h2>
+        <div class="content">
+          <ul>
+			<li>Develop web applications using Express.js.</li>
+			<li>Implement RESTful APIs.</li>
+			<li>Utilize Node.js for backend execution.</li>
+			<li>Handle authentication and authorization with JWT.</li>
+			<li>Manage middleware in Express.</li>
+			<li>Employ Git and GitHub for version control.</li>
+			<li>Optimize server performance.</li>
+			<li>Handle errors and debug code.</li>
+		  </ul>
+        </div>
+      </section>
+      <section>
+        <h2 class="section-title">Education</h2>
+        <div class="content">
+          <p> Systems Engineer at the University of Cartagena</p>
+        </div>
+      </section>
+      <section>
+        <h2 class="section-title">Skills</h2>
+        <div class="skills">
+		      <Pill>HTML</Pill>
+		      <Pill>CSS</Pill>
+		      <Pill>Javascript</Pill>
+		      <Pill>Express</Pill>
+		      <Pill>React JS</Pill>
+          <Pill>Cypress.io</Pill>
+          <Pill>Postman</Pill>
+          <Pill>Jenkins</Pill>
+		      <Pill>WordPress</Pill>
+        </div>
+      </section>
+    </main>
+
+    <ContactCTA />
+  </div>
+</BaseLayout>
+
+<style>
+  .phrase h4{
+    font-size: 18px;
+    color: var(--gray-400);
+  }
+  .about {
+    display: flex;
+    flex-direction: column;
+    gap: 3.5rem;
+  }
+
+  img {
+    margin-top: 1.5rem;
+    border-radius: 1.5rem;
+    box-shadow: var(--shadow-md);
+  }
+
+  section {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    color: var(--gray-200);
+  }
+
+  .section-title {
+    grid-column-start: 1;
+    font-size: var(--text-xl);
+    color: var(--gray-0);
+  }
+
+  .content {
+    grid-column: 2 / 4;
+  }
+  .skills {
+    display: flex;
+    gap: 0.5rem;
+	flex-wrap: wrap;
+  }
+
+  .content :global(a) {
+    text-decoration: 1px solid underline transparent;
+    text-underline-offset: 0.25em;
+    transition: text-decoration-color var(--theme-transition);
+  }
+
+  .content :global(a:hover),
+  .content :global(a:focus) {
+    text-decoration-color: currentColor;
+  }
+
+  @media (min-width: 50em) {
+    .phrase h4{
+    font-size: 1.0em;
+    
+  }
+    .about {
+      display: grid;
+      grid-template-columns: 1fr 60% 1fr;
+    }
+
+    .about > :global(:first-child) {
+      grid-column-start: 2;
+    }
+
+    section {
+      display: contents;
+      font-size: var(--text-lg);
+    }
+  }
+</style>
